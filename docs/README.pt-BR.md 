@@ -1,8 +1,8 @@
-# Local UserEmbed Plugin for Moodle
+# Local globalembed Plugin for Moodle
 
 ## Descrição
 
-O **Local UserEmbed** é um plugin para Moodle que permite aos administradores configurar e exibir conteúdo incorporado (embed) globalmente para usuários autorizados. O plugin adiciona funcionalidades para incorporar dashboards, relatórios ou qualquer conteúdo via iframe/script no ambiente Moodle.
+O **Local globalembed** é um plugin para Moodle que permite aos administradores configurar e exibir conteúdo incorporado (embed) globalmente para usuários autorizados. O plugin adiciona funcionalidades para incorporar dashboards, relatórios ou qualquer conteúdo via iframe/script no ambiente Moodle.
 
 ## Características
 
@@ -24,21 +24,21 @@ O **Local UserEmbed** é um plugin para Moodle que permite aos administradores c
 
 ### Método 2: Instalação Manual
 
-1. Extraia os arquivos na pasta `/local/userembed/` do seu Moodle
+1. Extraia os arquivos na pasta `/local/globalembed/` do seu Moodle
 2. Acesse **Administração do Site > Notificações**
 3. Execute o processo de atualização do banco de dados
 
 ## Estrutura do Plugin
 
 ```
-local/userembed/
+local/globalembed/
 ├── db/
 │   └── access.php          # Definições de capacidades
 ├── lang/
 │   ├── en/
-│   │   └── local_userembed.php    # Strings em inglês
+│   │   └── local_globalembed.php    # Strings em inglês
 │   └── pt_br/
-│       └── local_userembed.php    # Strings em português
+│       └── local_globalembed.php    # Strings em português
 ├── lib.php                 # Funções principais e hooks
 ├── settings.php           # Configurações administrativas
 ├── version.php           # Informações da versão
@@ -71,7 +71,7 @@ Acesse **Administração do Site > Plugins > Plugins Locais > Global Embed**
 
 ### 2. Permissões
 
-O plugin cria a capacidade `local/userembed:viewembed` que controla quem pode visualizar o conteúdo embed.
+O plugin cria a capacidade `local/globalembed:viewembed` que controla quem pode visualizar o conteúdo embed.
 
 #### Configuração de Permissões:
 1. Acesse **Administração do Site > Usuários > Permissões > Definir papéis**
@@ -103,7 +103,7 @@ O plugin cria a capacidade `local/userembed:viewembed` que controla quem pode vi
    - Clique em "Ver Dashboard" (se habilitado)
 
 2. **Via URL Direta**:
-   - Acesse: `/local/userembed/view.php?id=USER_ID`
+   - Acesse: `/local/globalembed/view.php?id=USER_ID`
    - Substitua `USER_ID` pelo ID do usuário
 
 ## Exemplos de Uso
@@ -135,7 +135,7 @@ O plugin cria a capacidade `local/userembed:viewembed` que controla quem pode vi
 
 2. **Usuário não consegue ver o conteúdo**
    - **Causa**: Usuário não tem a permissão necessária
-   - **Solução**: Configure a capacidade `local/userembed:viewembed` para o papel do usuário
+   - **Solução**: Configure a capacidade `local/globalembed:viewembed` para o papel do usuário
 
 3. **Link não aparece no perfil**
    - **Causa**: Opção "Exibir link no perfil" desabilitada

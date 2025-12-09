@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Capability definitions for Local UserEmbed plugin.
+ * Capability definitions for Local globalembed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
-    'local/userembed:viewembed' => [
+    'local/globalembed:viewembed' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [

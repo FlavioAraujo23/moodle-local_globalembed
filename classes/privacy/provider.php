@@ -15,28 +15,30 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy provider for local_userembed plugin.
+ * Privacy provider for local_globalembed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @category   privacy
  * @copyright  2025 Flávio Araújo
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace local_userembed\privacy;
+namespace local_globalembed\privacy;
 
 /**
- * Privacy provider implementation for local_userembed.
+ * Privacy provider implementation for local_globalembed.
  *
  * This plugin does not store any personal data.
  */
-class provider implements \core_privacy\local\metadata\null_provider {
+class provider implements \core_privacy\local\metadata\null_provider
+{
     /**
      * Get the reason why this plugin stores no personal data.
      *
      * @return string
      */
-    public static function get_reason(): string {
-        return get_string('privacy:metadata', 'local_userembed');
+    public static function get_reason(): string
+    {
+        return get_string('privacy:metadata', 'local_globalembed');
     }
 }

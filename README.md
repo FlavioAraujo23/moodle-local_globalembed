@@ -24,21 +24,21 @@ The **Global Embed** is a Moodle plugin that allows administrators to configure 
 
 ### Method 2: Manual Installation
 
-1. Extract the files to the `/local/userembed/` folder of your Moodle
+1. Extract the files to the `/local/globalembed/` folder of your Moodle
 2. Go to **Site Administration > Notifications**
 3. Run the database upgrade process
 
 ## Plugin Structure
 
 ```
-local/userembed/
+local/globalembed/
 ├── db/
 │   └── access.php          # Capability definitions
 ├── lang/
 │   ├── en/
-│   │   └── local_userembed.php    # English strings
+│   │   └── local_globalembed.php    # English strings
 │   └── pt_br/
-│       └── local_userembed.php    # Portuguese strings
+│       └── local_globalembed.php    # Portuguese strings
 ├── lib.php                 # Main functions and hooks
 ├── settings.php           # Administrative settings
 ├── version.php           # Version information
@@ -76,7 +76,7 @@ Go to **Site Administration > Plugins > Local plugins > Global Embed**
 
 ### 2. Permissions
 
-The plugin creates the `local/userembed:viewembed` capability that controls who can view the embedded content.
+The plugin creates the `local/globalembed:viewembed` capability that controls who can view the embedded content.
 
 #### Permission Configuration:
 
@@ -112,7 +112,7 @@ The plugin creates the `local/userembed:viewembed` capability that controls who 
    - Click "View Dashboard" (if enabled)
 
 2. **Via Direct URL**:
-   - Access: `/local/userembed/view.php?id=USER_ID`
+   - Access: `/local/globalembed/view.php?id=USER_ID`
    - Replace `USER_ID` with the user ID
 
 ## Usage Examples
@@ -142,7 +142,7 @@ The plugin creates the `local/userembed:viewembed` capability that controls who 
 2. **User cannot see the content**
 
    - **Cause**: User doesn't have the necessary permission
-   - **Solution**: Configure the `local/userembed:viewembed` capability for the user's role
+   - **Solution**: Configure the `local/globalembed:viewembed` capability for the user's role
 
 3. **Link doesn't appear in profile**
 

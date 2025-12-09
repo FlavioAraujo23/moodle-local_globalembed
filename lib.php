@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Library functions and hooks for Local UserEmbed plugin.
+ * Library functions and hooks for Local globalembed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -29,16 +29,17 @@
  * @param stdClass $user The user object.
  * @return void
  */
-function local_userembed_myprofile_navigation(core_user\output\myprofile\tree $tree, $user) {
+function local_globalembed_myprofile_navigation(core_user\output\myprofile\tree $tree, $user)
+{
     if (
-        has_capability('local/userembed:viewembed', context_system::instance()) &&
-        get_config('local_userembed', 'showinprofile')
+        has_capability('local/globalembed:viewembed', context_system::instance()) &&
+        get_config('local_globalembed', 'showinprofile')
     ) {
-        $url = new moodle_url('/local/userembed/view.php', ['id' => $user->id]);
+        $url = new moodle_url('/local/globalembed/view.php', ['id' => $user->id]);
         $node = new core_user\output\myprofile\node(
             'miscellaneous',
-            'userembed_view',
-            get_string('linknameinmenuprofile', 'local_userembed'),
+            'globalembed_view',
+            get_string('linknameinmenuprofile', 'local_globalembed'),
             null,
             $url
         );

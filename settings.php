@@ -17,7 +17,7 @@
 /**
  * Admin settings for Local UserEmbed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,12 +25,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($hassiteconfig) {
-    $settings = new admin_settingpage('local_userembed', get_string('pluginname', 'local_userembed'));
+    $settings = new admin_settingpage('local_globalembed', get_string('pluginname', 'local_globalembed'));
 
     $settings->add(new admin_setting_configtextarea(
-        'local_userembed/embedcode',
-        get_string('embedcode', 'local_userembed'),
-        get_string('embedcode_desc', 'local_userembed'),
+        'local_globalembed/embedcode',
+        get_string('embedcode', 'local_globalembed'),
+        get_string('embedcode_desc', 'local_globalembed'),
         '',
         PARAM_RAW,
         60,
@@ -38,9 +38,9 @@ if ($hassiteconfig) {
     ));
 
     $settings->add(new admin_setting_configcheckbox(
-        'local_userembed/showinprofile',
-        get_string('showinprofile', 'local_userembed'),
-        get_string('showinprofile_desc', 'local_userembed'),
+        'local_globalembed/showinprofile',
+        get_string('showinprofile', 'local_globalembed'),
+        get_string('showinprofile_desc', 'local_globalembed'),
         1
     ));
 
@@ -48,10 +48,10 @@ if ($hassiteconfig) {
 
     // Force add to usermenu if it doesn't already exist.
     $usermenu = get_config('core_admin', 'usermenuitems');
-    if (strpos($usermenu, 'local_userembed|/local/userembed/view.php') === false) {
+    if (strpos($usermenu, 'local_globalembed|/local/userembed/view.php') === false) {
         set_config(
             'usermenuitems',
-            $usermenu . "\n" . 'userembed,local_userembed|/local/userembed/view.php',
+            $usermenu . "\n" . 'userembed,local_globalembed|/local/userembed/view.php',
             'core_admin'
         );
     }

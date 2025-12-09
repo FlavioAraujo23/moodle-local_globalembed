@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information for Local UserEmbed plugin.
+ * Version information for Local globalembed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_userembed';
+$plugin->component = 'local_globalembed';
 $plugin->version = 2025092401;   // YYYYMMDDXX.
 $plugin->requires = 2022041900;   // Moodle 4.0+.
 $plugin->maturity = MATURITY_STABLE;

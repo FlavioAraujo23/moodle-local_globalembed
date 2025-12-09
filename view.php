@@ -17,7 +17,7 @@
 /**
  * View page for displaying embedded content.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -28,20 +28,20 @@ $userid = required_param('id', PARAM_INT);
 require_login();
 
 $context = context_system::instance();
-require_capability('local/userembed:viewembed', $context);
+require_capability('local/globalembed:viewembed', $context);
 
-$PAGE->set_url(new moodle_url('/local/userembed/view.php', ['id' => $userid]));
+$PAGE->set_url(new moodle_url('/local/globalembed/view.php', ['id' => $userid]));
 $PAGE->set_context($context);
-$PAGE->set_title(get_string('viewembed', 'local_userembed'));
+$PAGE->set_title(get_string('viewembed', 'local_globalembed'));
 
-$embedcode = get_config('local_userembed', 'embedcode');
+$embedcode = get_config('local_globalembed', 'embedcode');
 
 echo $OUTPUT->header();
 
 if (!empty($embedcode)) {
     echo format_text($embedcode, FORMAT_HTML, ['noclean' => true]);
 } else {
-    echo $OUTPUT->notification(get_string('noembed', 'local_userembed'), 'info');
+    echo $OUTPUT->notification(get_string('noembed', 'local_globalembed'), 'info');
 }
 
 echo $OUTPUT->footer();

@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * English language strings for Local UserEmbed plugin.
+ * English language strings for Local globalembed plugin.
  *
- * @package    local_userembed
+ * @package    local_globalembed
  * @copyright  2025 Flávio Araújo <flaviolopes1027@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['pluginname'] = 'Global Embed';
 $string['viewembed'] = 'View embedded content';
-$string['userembed:viewembed'] = 'View embedded content';
+$string['globalembed:viewembed'] = 'View embedded content';
 $string['noembed'] = 'No embed code configured.';
 $string['embedcode'] = 'Embed code';
 $string['embedcode_desc'] = 'Provide the embed code (iframe, script, etc.) that will be displayed to users with permission.';
